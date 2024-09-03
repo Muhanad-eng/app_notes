@@ -1,3 +1,4 @@
+import 'package:app_note/widgets/custtom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class CusttomBottomSheet extends StatelessWidget {
@@ -5,23 +6,18 @@ class CusttomBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height/2,
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(   
+          children: [
+            CusttomTextField(),
+            SizedBox(height:10),
+            CusttomTextField(),
+            SizedBox(height:20),
+            MaterialButton(onPressed: (){})
       
-      decoration: BoxDecoration(
-        //color: Colors.grey,
-        
+          ],
       
-      ),
-      child: Column(
-        children: [
-          TextField(),
-          SizedBox(height:10),
-          TextField(),
-           SizedBox(height:20),
-           MaterialButton(onPressed: (){})
-
-        ],
       ),
     );
   }

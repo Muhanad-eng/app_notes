@@ -10,9 +10,14 @@ class CusttomBottomSheet extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Column(   
           children: [
-            CusttomTextField(),
-            SizedBox(height:10),
-            CusttomTextField(),
+           const CusttomTextField(
+              hintText: "Title",
+            ),
+           const SizedBox(height:10),
+         const  CusttomTextField(
+              hintText: "Content",
+              maxLines: 5,
+            ),
             SizedBox(height:20),
             MaterialButton(onPressed: (){})
       
